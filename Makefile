@@ -20,3 +20,9 @@ endif
 
 clean:
 	@rm -rf build
+
+up:	clean
+	@git add .
+	@read -p "Enter a Comment: " comment;\
+	git commit -m $$comment;\
+	git push origin master
